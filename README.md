@@ -1,6 +1,6 @@
 # create-tropa
 
-Generator of `tropa` applications
+Generator of [tropa](https://github.com/drummer1992/tropa) applications
 
 # Quick Start
 

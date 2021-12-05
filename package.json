@@ -2,7 +2,7 @@
   "type": "commonjs",
   "name": "create-tropa",
   "description": "Tropa' application generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Andrii Varlamov",
   "keywords": [
     "tropa",
@@ -10,6 +10,14 @@
     "api"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/drummer1992/create-tropa",
+  "bugs": {
+    "url": "https://github.com/drummer1992/create-tropa/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drummer1992/create-tropa.git"
+  },
   "dependencies": {
     "generify": "^4.2.0",
     "yargs-parser": "^21.0.0"
