@@ -32,12 +32,12 @@ const template = {
         "nodemon": cliPkg.devDependencies.nodemon,
     },
     logInstructions: function (pkg) {
-        console.log('debug', 'saved package.json')
-        console.log('info', `project ${pkg.name} generated successfully`)
-        console.log('debug', `run 'npm install' to install the dependencies`)
-        console.log('debug', `run 'npm run build' to build the application`)
-        console.log('debug', `run 'npm run debug' to start the application in debug mode`)
-        console.log('debug', `run 'npm start' to start the application`)
+        console.warn('saved package.json')
+        console.log(`project ${pkg.name} generated successfully`)
+        console.warn(`run 'npm install' to install the dependencies`)
+        console.warn(`run 'npm run build' to build the application`)
+        console.warn(`run 'npm run debug' to start the application in debug mode`)
+        console.warn(`run 'npm start' to start the application`)
     }
 }
 

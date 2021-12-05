@@ -6,7 +6,7 @@ const {readFile, writeFile} = require("fs");
 module.exports = (targetDirectory, template) => {
     return new Promise((resolve, reject) => {
         generify(path.join(__dirname, template.dir), targetDirectory, {}, function (file) {
-            console.log('debug', `generated ${file}`)
+            console.log(`generated ${file}`)
         }, function (err) {
             if (err) {
                 return reject(err)
@@ -15,7 +15,7 @@ module.exports = (targetDirectory, template) => {
             process.chdir(targetDirectory)
             execSync('npm init -y')
 
-            console.log('info', `reading package.json in ${targetDirectory}`)
+            console.log(`reading package.json in ${targetDirectory}`)
             readFile('package.json', (err, data) => {
                 if (err) {
                     return reject(err)
@@ -38,7 +38,7 @@ module.exports = (targetDirectory, template) => {
                 pkg.dependencies = Object.assign(pkg.dependencies || {}, template.dependencies)
                 pkg.devDependencies = Object.assign(pkg.devDependencies || {}, template.devDependencies)
 
-                console.log('debug', 'edited package.json, saving')
+                console.log('edited package.json, saving')
                 writeFile('package.json', JSON.stringify(pkg, null, 2), (err) => {
                     if (err) {
                         return reject(err)
