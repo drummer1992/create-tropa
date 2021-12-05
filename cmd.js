@@ -9,6 +9,7 @@ const generate = require('./generate')
 const template = {
     dir: 'tropa-app',
     main: './lib/index.js',
+    description: "Tropa App",
     scripts: {
         build: 'npx babel ./src --out-dir lib',
         start: 'node ./lib/index.js --out-dir lib',
@@ -34,9 +35,9 @@ const template = {
         console.log('debug', 'saved package.json')
         console.log('info', `project ${pkg.name} generated successfully`)
         console.log('debug', `run 'npm install' to install the dependencies`)
+        console.log('debug', `run 'npm run build' to build the application`)
+        console.log('debug', `run 'npm run debug' to start the application in debug mode`)
         console.log('debug', `run 'npm start' to start the application`)
-        console.log('debug', `run 'npm run dev' to start the application with pino-colada pretty logging (not suitable for production)`)
-        console.log('debug', `run 'npm test' to execute the unit tests`)
     }
 }
 

@@ -30,7 +30,11 @@ module.exports = (targetDirectory, template) => {
 
                 pkg.name = template.dir
                 pkg.main = template.main
+                pkg.description = template.description
                 pkg.scripts = Object.assign(pkg.scripts || {}, template.scripts)
+
+                delete pkg.scripts.test
+
                 pkg.dependencies = Object.assign(pkg.dependencies || {}, template.dependencies)
                 pkg.devDependencies = Object.assign(pkg.devDependencies || {}, template.devDependencies)
 
