@@ -13,7 +13,8 @@ const template = {
     scripts: {
         build: 'npx babel ./src --out-dir lib',
         start: 'node ./lib/index.js --out-dir lib',
-        debug: "nodemon --exec babel-node ./src/index.js"
+        debug: 'nodemon --exec babel-node ./src/index.js',
+        lint: 'eslint ./src --ext .js --fix'
     },
     dependencies: {
         tropa: cliPkg.devDependencies.tropa,

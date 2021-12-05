@@ -35,3 +35,8 @@ npm run build
 ```sh
 npm run start
 ```
+
+### Perform code analyse
+```sh
+npm run lint
+```
