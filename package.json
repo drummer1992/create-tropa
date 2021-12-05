@@ -2,7 +2,7 @@
   "type": "commonjs",
   "name": "create-tropa",
   "description": "Tropa' application generator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Andrii Varlamov",
   "keywords": [
     "tropa"
