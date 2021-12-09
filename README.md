@@ -21,6 +21,11 @@ cd ./hello-world
 npm install
 ```
 
+### Build and Start app
+```sh
+npm run start:prod
+```
+
 ### Debug app
 ```sh
 npm run debug
@@ -34,6 +39,11 @@ npm run build
 ### Start compiled app
 ```sh
 npm run start
+```
+
+### Run tests
+```sh
+npm run test
 ```
 
 ### Perform code analyse

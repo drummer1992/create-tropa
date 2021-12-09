@@ -13,8 +13,10 @@ const template = {
     scripts: {
         build: 'npx babel ./src --out-dir lib',
         start: 'node ./lib/index.js --out-dir lib',
+        'start:prod': 'npx babel ./src --out-dir lib && node ./lib/index.js --out-dir lib',
         debug: 'nodemon --exec babel-node ./src/index.js',
-        lint: 'eslint ./src --ext .js --fix'
+        lint: 'eslint ./src --ext .js --fix',
+        test: 'mocha test',
     },
     dependencies: {
         tropa: cliPkg.devDependencies.tropa,
@@ -31,6 +33,7 @@ const template = {
         "babel-plugin-parameter-decorator": cliPkg.devDependencies["babel-plugin-parameter-decorator"],
         "eslint": cliPkg.devDependencies.eslint,
         "nodemon": cliPkg.devDependencies.nodemon,
+        "mocha": cliPkg.devDependencies.mocha,
     },
     logInstructions: function (pkg) {
         console.warn('saved package.json')
