@@ -16,11 +16,6 @@ The `npm init` command will create `tropa` project at the `./hello-world` direct
 cd ./hello-world    
 ```
 
-### Install dependency
-```sh
-npm install
-```
-
 ### Build and Start app
 ```sh
 npm run start:prod
