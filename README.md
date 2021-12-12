@@ -13,7 +13,7 @@ The `npm init` command will create `tropa` project at the `./hello-world` direct
 It is possible to generate TypeScript app, just add `--lang=ts`
 
 ```sh
-npm init tropa hello-world --lang=ts
+npm init tropa hello-world -- --lang=ts
 ```
 
 ### Open project directory

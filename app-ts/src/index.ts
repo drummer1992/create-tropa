@@ -2,7 +2,7 @@ import * as tropa from 'tropa'
 import * as http from 'http'
 import * as path from 'path'
 
-const PORT: number = Number(process.env.PORT || 3000)
+const PORT = Number(process.env.PORT || 3000)
 
 async function bootstrap() {
   await tropa.loadControllers(path.resolve(__dirname, './controllers'))
