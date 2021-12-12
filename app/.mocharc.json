@@ -1,0 +1,9 @@
+{
+  "extension": [
+    "js"
+  ],
+  "require": [
+    "@babel/register",
+    "assert"
+  ]
+}

@@ -1,8 +1,8 @@
 import * as tropa from 'tropa'
-import http from 'http'
-import path from 'path'
+import * as http from 'http'
+import * as path from 'path'
 
-const PORT = process.env.PORT || 3000
+const PORT: number = Number(process.env.PORT || 3000)
 
 async function bootstrap() {
   await tropa.loadControllers(path.resolve(__dirname, './controllers'))

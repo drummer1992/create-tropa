@@ -1,6 +1,6 @@
 const generify = require("generify");
 const path = require("path");
-const childProcess = require("child_process");
+const childProcess = require("child_process")
 const fs = require("fs");
 
 const onProjectGenerated = (dir, template) => {
@@ -13,7 +13,7 @@ const onProjectGenerated = (dir, template) => {
   const pkgJson = fs.readFileSync('package.json', 'utf8')
   const pkg = JSON.parse(pkgJson)
 
-  pkg.name = template.dir
+  pkg.name = `tropa-${template.dir}`
   pkg.main = template.main
   pkg.description = template.description
   pkg.scripts = Object.assign(pkg.scripts || {}, template.scripts)
@@ -24,9 +24,9 @@ const onProjectGenerated = (dir, template) => {
 
   fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2))
 
-  childProcess.execSync('npm install', {stdio: 'inherit'})
+  childProcess.execSync('npm install', { stdio: 'inherit' })
 
-  template.logInstructions()
+  template.logInstructions(pkg.name)
 }
 
 module.exports = (dir, template) => new Promise((resolve, reject) => {

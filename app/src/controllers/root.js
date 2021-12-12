@@ -1,7 +1,7 @@
 import { Body, Get, Param, Post, Prefix, Query } from 'tropa'
 
 @Prefix('/')
-class Root {
+export default class Root {
   @Get('/')
   hello() {
     return { Hello: 'World' }

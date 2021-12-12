@@ -1,4 +1,5 @@
 import Root from "../src/controllers/root";
+import * as assert from 'assert'
 
 const controller = new Root()
 
