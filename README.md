@@ -10,7 +10,7 @@ npm init tropa hello-world
 ```
 The `npm init` command will create `tropa` project at the `./hello-world` directory.
 
-It is possible to generate TypeScript app, just add `--lang=ts`
+It is possible to generate TypeScript app too, just add `--lang=ts`
 
 ```sh
 npm init tropa hello-world -- --lang=ts
