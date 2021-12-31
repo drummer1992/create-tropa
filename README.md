@@ -22,11 +22,6 @@ npm init tropa hello-world -- --lang=ts
 cd ./hello-world    
 ```
 
-### Build and Start app
-```sh
-npm run start:prod
-```
-
 ### Debug app
 ```sh
 npm run debug
