@@ -90,7 +90,7 @@ const packageJsonByLang = {
 const run = async args => {
   const opts = argv(args)
   const dir = opts._[0]
-  const lang = opts.lang || 'js'
+  const lang = opts.lang || 'ts'
 
   assert(dir, 'directory is not set')
   assert(packageJsonByLang[lang], `lang '${lang}' is not allowed`)
