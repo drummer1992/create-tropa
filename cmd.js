@@ -10,10 +10,9 @@ const generate = require('./generate')
 const logInstructions = pkgName => {
   console.warn('saved package.json')
   console.log(`${pkgName} generated successfully`)
-  console.warn(`run 'npm run start:prod' to build and run the application`)
+  console.warn(`run 'npm run debug' to start the application in debug mode`)
   console.warn(`run 'npm run build' to build the application`)
   console.warn(`run 'npm start' to start the application`)
-  console.warn(`run 'npm run debug' to start the application in debug mode`)
   console.warn(`run 'npm run test' to run tests`)
   console.warn(`run 'npm run lint' to perform code analyse`)
 }
