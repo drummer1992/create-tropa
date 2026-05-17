@@ -1,7 +1,7 @@
 import * as tropa from 'tropa'
 import * as http from 'http'
 import * as path from 'path'
-import * as cors from 'cors'
+import cors from 'cors'
 import pinoHttp from 'pino-http'
 
 const PORT = Number(process.env.PORT || 3000)

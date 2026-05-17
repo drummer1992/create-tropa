@@ -6,7 +6,7 @@
 
 ### Init App
 ```sh
-npm init tropa hello-world
+npx create-tropa@latest hello-world
 ```
 The `npm init` command will create `tropa` project at the `./hello-world` directory.
 
