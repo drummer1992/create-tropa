@@ -17,72 +17,38 @@ const logInstructions = pkgName => {
   console.warn(`run 'npm run lint' to perform code analyse`)
 }
 
-const jsTemplate = {
-  dir            : 'app',
-  main           : './dist/index.js',
-  description    : 'Tropa App',
-  scripts        : {
-    build       : 'npx babel ./src --out-dir dist',
-    start       : 'MODE=production node ./dist/index.js',
-    debug       : 'nodemon --exec babel-node ./src/index.js',
-    lint        : 'eslint ./src --ext .js --fix',
-    test        : 'mocha test',
-  },
-  dependencies   : {
-    tropa      : cliPkg.devDependencies.tropa,
-    "cors"     : cliPkg.devDependencies.cors,
-    "pino-http": cliPkg.devDependencies["pino-http"],
-  },
-  devDependencies: {
-    "@babel/cli"                       : cliPkg.devDependencies["@babel/cli"],
-    "@babel/core"                      : cliPkg.devDependencies["@babel/core"],
-    "@babel/eslint-parser"             : cliPkg.devDependencies["@babel/eslint-parser"],
-    "@babel/node"                      : cliPkg.devDependencies["@babel/node"],
-    "@babel/plugin-proposal-decorators": cliPkg.devDependencies["@babel/plugin-proposal-decorators"],
-    "@babel/plugin-transform-runtime"  : cliPkg.devDependencies["@babel/plugin-transform-runtime"],
-    "@babel/preset-env"                : cliPkg.devDependencies["@babel/preset-env"],
-    "@babel/register"                  : cliPkg.devDependencies["@babel/register"],
-    "babel-plugin-parameter-decorator" : cliPkg.devDependencies["babel-plugin-parameter-decorator"],
-    "eslint"                           : cliPkg.devDependencies.eslint,
-    "nodemon"                          : cliPkg.devDependencies.nodemon,
-    "mocha"                            : cliPkg.devDependencies.mocha,
-    "pino-pretty"                      : cliPkg.devDependencies["pino-pretty"],
-  },
-  logInstructions
-}
-
 const tsTemplate = {
   dir            : 'app-ts',
   main           : './dist/index.js',
-  description    : "Tropa App",
+  description    : 'Tropa App',
   scripts        : {
-    build       : 'tsc',
-    start       : 'MODE=production node ./dist/index.js',
-    debug       : 'nodemon ./src/index.ts',
-    lint        : 'eslint ./src --ext .ts --fix',
-    test        : 'mocha test',
+    build: 'tsc',
+    start: 'MODE=production node ./dist/index.js',
+    debug: 'nodemon ./src/index.ts',
+    lint : 'eslint ./src --ext .ts --fix',
+    test : 'mocha test',
   },
   dependencies   : {
     tropa      : cliPkg.devDependencies.tropa,
-    "cors"     : cliPkg.devDependencies.cors,
-    "pino-http": cliPkg.devDependencies["pino-http"],
+    'cors'     : cliPkg.devDependencies.cors,
+    'pino-http': cliPkg.devDependencies['pino-http'],
   },
   devDependencies: {
     nodemon                           : cliPkg.devDependencies.nodemon,
-    'ts-node'                         : cliPkg.devDependencies["ts-node"],
-    "pino-pretty"                     : cliPkg.devDependencies["pino-pretty"],
-    '@types/node'                     : cliPkg.devDependencies["@types/node"],
-    '@types/mocha'                    : cliPkg.devDependencies["@types/mocha"],
-    '@typescript-eslint/parser'       : cliPkg.devDependencies["@typescript-eslint/parser"],
-    "@typescript-eslint/eslint-plugin": cliPkg.devDependencies["@typescript-eslint/eslint-plugin"],
+    'ts-node'                         : cliPkg.devDependencies['ts-node'],
+    'pino-pretty'                     : cliPkg.devDependencies['pino-pretty'],
+    '@types/node'                     : cliPkg.devDependencies['@types/node'],
+    '@types/cors'                     : cliPkg.devDependencies['@types/cors'],
+    '@types/mocha'                    : cliPkg.devDependencies['@types/mocha'],
+    '@typescript-eslint/parser'       : cliPkg.devDependencies['@typescript-eslint/parser'],
+    '@typescript-eslint/eslint-plugin': cliPkg.devDependencies['@typescript-eslint/eslint-plugin'],
   },
-  logInstructions
+  logInstructions,
 }
 
 const isCurrentDir = dir => dir === '.' || dir === './'
 
 const packageJsonByLang = {
-  js: jsTemplate,
   ts: tsTemplate,
 }
 
